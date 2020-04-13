@@ -52,50 +52,8 @@ class home_tab extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontSize: 30,
                   )),
-              onPressed: flipcoin,
-              color: Colors.black,
-              textColor: Colors.yellow,
-              padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-              splashColor: Colors.grey,
-            ),
-            SizedBox(height: 30),
-            RaisedButton(
-              child: Text("Roll a Dice",
-                  style: TextStyle(
-                    color: Colors.yellow,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 30,
-                  )),
-              onPressed: rolldice,
-              color: Colors.black,
-              textColor: Colors.yellow,
-              padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-              splashColor: Colors.grey,
-            ),
-            SizedBox(height: 30),
-            RaisedButton(
-              child: Text("Magic 8 Ball",
-                  style: TextStyle(
-                    color: Colors.yellow,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 30,
-                  )),
-              onPressed: shakeball,
-              color: Colors.black,
-              padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-              splashColor: Colors.grey,
-            ),
-            SizedBox(height: 50),
-            RaisedButton(
-              child: Text(
-                "Get Results",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                ),
-              ),
               onPressed: () {
+                flipcoin();
                 return showDialog(
                   context: context,
                   builder: (context) {
@@ -117,11 +75,83 @@ class home_tab extends StatelessWidget {
                   },
                 );
               },
-              color: Colors.pink,
-              textColor: Colors.black,
+              color: Colors.black,
+              textColor: Colors.yellow,
               padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
               splashColor: Colors.grey,
             ),
+            SizedBox(height: 30),
+            RaisedButton(
+              child: Text("Roll a Dice",
+                  style: TextStyle(
+                    color: Colors.yellow,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30,
+                  )),
+              onPressed: () {
+                rolldice();
+                return showDialog(
+                  context: context,
+                  builder: (context) {
+                    return AlertDialog(
+                      // Retrieve the text the that user has entered by using the
+                      // TextEditingController.
+                        content: Text(
+                          element,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontWeight: FontWeight.w200,
+                            fontSize: 40,
+                            foreground: Paint()
+                              ..style = PaintingStyle.stroke
+                              ..strokeWidth = 1
+                              ..color = Colors.black,
+                          ),
+                        ));
+                  },
+                );
+              },
+              color: Colors.black,
+              textColor: Colors.yellow,
+              padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+              splashColor: Colors.grey,
+            ),
+            SizedBox(height: 30),
+            RaisedButton(
+              child: Text("Magic 8 Ball",
+                  style: TextStyle(
+                    color: Colors.yellow,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30,
+                  )),
+              onPressed: () {
+                shakeball();
+                return showDialog(
+                  context: context,
+                  builder: (context) {
+                    return AlertDialog(
+                      // Retrieve the text the that user has entered by using the
+                      // TextEditingController.
+                        content: Text(
+                          element,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontWeight: FontWeight.w200,
+                            fontSize: 40,
+                            foreground: Paint()
+                              ..style = PaintingStyle.stroke
+                              ..strokeWidth = 1
+                              ..color = Colors.black,
+                          ),
+                        ));
+                  },
+                );
+              },
+              color: Colors.black,
+              padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+              splashColor: Colors.grey,
+            ),
+            SizedBox(height: 50),
           ],
         )));
   }

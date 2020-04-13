@@ -61,7 +61,7 @@ class rng_tab extends StatelessWidget {
             ),
             SizedBox(height: 40),
             RaisedButton(
-              child: Text("Get Results", style: TextStyle(
+              child: Text("Get Your Random Number", style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
