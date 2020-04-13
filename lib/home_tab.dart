@@ -46,7 +46,11 @@ class home_tab extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             RaisedButton(
-              child: Text("Flip a coin (2)"),
+              child: Text("Flip a coin", style: TextStyle(
+                color: Colors.yellow,
+                fontWeight: FontWeight.bold,
+                fontSize: 30,
+              )),
               onPressed: flipcoin,
               color: Colors.black,
               textColor: Colors.yellow,
@@ -55,7 +59,11 @@ class home_tab extends StatelessWidget {
             ),
             SizedBox(height: 20),
             RaisedButton(
-              child: Text("Roll a Dice (6)"),
+              child: Text("Roll a Dice", style: TextStyle(
+                color: Colors.yellow,
+                fontWeight: FontWeight.bold,
+                fontSize: 30,
+              )),
               onPressed: rolldice,
               color: Colors.black,
               textColor: Colors.yellow,
@@ -64,16 +72,25 @@ class home_tab extends StatelessWidget {
             ),
             SizedBox(height: 20),
             RaisedButton(
-              child: Text("Magic 8 Ball (8)"),
+              child: Text("Magic 8 Ball",
+                  style: TextStyle(
+                    color: Colors.yellow,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30,
+                  )),
               onPressed: shakeball,
               color: Colors.black,
-              textColor: Colors.yellow,
               padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
               splashColor: Colors.grey,
             ),
             SizedBox(height: 50),
             RaisedButton(
-              child: Text("Get Results"),
+              child: Text("Get Results",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ), ),
               onPressed: () {
                 return showDialog(
                   context: context,
