@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "179507468877",
+    "firebase_url": "https://slap-243de.firebaseio.com",
+    "project_id": "slap-243de",
+    "storage_bucket": "slap-243de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:179507468877:android:8eb2443c4c508b1ae5da04",
+        "android_client_info": {
+          "package_name": "com.soundslikeaplan.slap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "179507468877-59q5mt91c33elrpcpml6o7h2sj9ssr69.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcc0eJc-FZ_wOG6md0yIcWWfU1DWjBDvw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "179507468877-59q5mt91c33elrpcpml6o7h2sj9ssr69.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
