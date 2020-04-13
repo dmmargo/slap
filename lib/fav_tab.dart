@@ -9,8 +9,6 @@ Future<String> _loadAStudentAsset() async {
   return await rootBundle.loadString('assets/jar.json');
 }
 
-
-
 TextEditingController jartitle = new TextEditingController();
 
 class fav_tab extends StatefulWidget {

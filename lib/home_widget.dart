@@ -29,7 +29,12 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('SLAP: Sounds like a Plan'),
+        title: Text('SLAP: Sounds like a Plan', style: TextStyle(
+            color: Colors.grey,
+            fontWeight: FontWeight.bold,
+            fontSize: 30)),
+        backgroundColor: Colors.black87,
+
       ),
       body: Center(
         child: widgetOptions.elementAt(selectedIndex),
@@ -43,7 +48,10 @@ class HomePageState extends State<HomePage> {
               icon: Icon(Icons.favorite), title: Text('Favorites')),
         ],
         currentIndex: selectedIndex,
-        fixedColor: Colors.pink,
+        //fixedColor: Colors.pink,
+        selectedItemColor: Colors.yellow,
+        unselectedItemColor: Colors.grey,
+        backgroundColor: Colors.black87,
         onTap: onItemTapped,
       ),
     );
