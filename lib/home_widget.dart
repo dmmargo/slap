@@ -29,7 +29,7 @@ class HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text('SLAP: Sounds like a Plan',
             style: TextStyle(
-              color: Colors.grey,
+              color: Colors.yellow,
               fontWeight: FontWeight.bold,
               fontSize: 30,
             )),
