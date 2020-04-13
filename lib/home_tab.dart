@@ -24,17 +24,17 @@ class home_tab extends StatelessWidget {
 
   void flipcoin() {
     element = (flip..shuffle()).first;
-    return print(element); // e.g. 'head'
+    //return print(element); // e.g. 'head'
   }
 
   void rolldice() {
     element = roll[rnd.nextInt(roll.length)];
-    return print(element); // e.g. '2'
+    //return print(element); // e.g. '2'
   }
 
   void shakeball() {
     element = shake[rnd.nextInt(shake.length)];
-    return print(element); // e.g. 'yes'
+    //return print(element); // e.g. 'yes'
   }
 
   @override

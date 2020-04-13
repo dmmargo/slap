@@ -81,7 +81,7 @@ class rng_tab extends StatelessWidget {
                   },
                 );
               },
-              color: Colors.pink,
+              color: Colors.pinkAccent,
               textColor: Colors.black,
               padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
               splashColor: Colors.grey,
