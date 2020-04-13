@@ -46,11 +46,12 @@ class home_tab extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             RaisedButton(
-              child: Text("Flip a coin", style: TextStyle(
-                color: Colors.yellow,
-                fontWeight: FontWeight.bold,
-                fontSize: 30,
-              )),
+              child: Text("Flip a coin",
+                  style: TextStyle(
+                    color: Colors.yellow,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30,
+                  )),
               onPressed: flipcoin,
               color: Colors.black,
               textColor: Colors.yellow,
@@ -59,11 +60,12 @@ class home_tab extends StatelessWidget {
             ),
             SizedBox(height: 20),
             RaisedButton(
-              child: Text("Roll a Dice", style: TextStyle(
-                color: Colors.yellow,
-                fontWeight: FontWeight.bold,
-                fontSize: 30,
-              )),
+              child: Text("Roll a Dice",
+                  style: TextStyle(
+                    color: Colors.yellow,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30,
+                  )),
               onPressed: rolldice,
               color: Colors.black,
               textColor: Colors.yellow,
@@ -85,12 +87,14 @@ class home_tab extends StatelessWidget {
             ),
             SizedBox(height: 50),
             RaisedButton(
-              child: Text("Get Results",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
-                  ), ),
+              child: Text(
+                "Get Results",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                ),
+              ),
               onPressed: () {
                 return showDialog(
                   context: context,
@@ -100,7 +104,15 @@ class home_tab extends StatelessWidget {
                         // TextEditingController.
                         content: Text(
                       element,
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w200,
+                        fontSize: 40,
+                        foreground: Paint()
+                          ..style = PaintingStyle.stroke
+                          ..strokeWidth = 1
+                          ..color = Colors.black,
+                      ),
                     ));
                   },
                 );

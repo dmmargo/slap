@@ -29,9 +29,12 @@ class HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text('SLAP: Sounds like a Plan',
             style: TextStyle(
-              color: Colors.yellow,
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.w200,
               fontSize: 30,
+              foreground: Paint()
+                ..style = PaintingStyle.stroke
+                ..strokeWidth = 2
+                ..color = Colors.yellow[700],
             )),
         backgroundColor: Colors.black87,
       ),

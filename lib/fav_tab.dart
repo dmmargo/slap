@@ -16,33 +16,31 @@ class fav_tab extends StatefulWidget {
 
   const fav_tab(Color white, {Key key, this.color}) : super(key: key);
   _ListViewClickListenerState createState() => _ListViewClickListenerState();
-
 }
+
 class JarNumber {
   final int index;
   JarNumber(this.index);
 }
 
-
 class _ListViewClickListenerState extends State<fav_tab> {
   GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   final List<String> _listViewData = [];
 
-
-  loadData()async{
+  loadData() async {
     String jsonString = await _loadAStudentAsset();
     final jsonResponse = json.decode(jsonString);
     print(jsonResponse[0]['options'].length);
-    for(int i = 0; i< jsonResponse[0]['options'].length ; i++) {
+    for (int i = 0; i < jsonResponse[0]['options'].length; i++) {
       _listViewData.add(jsonResponse[0]['options'][i]['name']);
     }
-      print('printing from json file');
-      //refresh the page
-      return (context as Element).reassemble();
+    print('printing from json file');
+    //refresh the page
+    return (context as Element).reassemble();
   }
 
   void addjar() {
-    if(jartitle.text != null){
+    if (jartitle.text != null) {
       TextEditingController newjartitle = jartitle;
 
       _listViewData.add(newjartitle.text);
@@ -51,11 +49,10 @@ class _ListViewClickListenerState extends State<fav_tab> {
       Navigator.of(context, rootNavigator: true).pop('dialog');
       jartitle = new TextEditingController();
       return print(jartitle.text);
-    }
-    else
+    } else
       return print("component was empty");
-
   }
+
   bool pressing = true;
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   final SnackBar snackBar = const SnackBar(content: Text('Showing Snackbar'));
@@ -64,28 +61,34 @@ class _ListViewClickListenerState extends State<fav_tab> {
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
-        title: Text('Pick your poison'),
+        title: Text('Pick your poison',
+            style: TextStyle(
+              fontWeight: FontWeight.w200,
+              fontSize: 25,
+              foreground: Paint()
+                ..style = PaintingStyle.stroke
+                ..strokeWidth = 2
+                ..color = Colors.black,
+            )),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.file_upload),
             tooltip: 'use existing JSON files',
             onPressed: () {
-              if (pressing == true){
+              if (pressing == true) {
                 loadData();
                 setState(() {
-                  pressing= false;
+                  pressing = false;
                   print(pressing);
                 });
+              } else {
+                print('cannot load anymore data');
               }
-              else
-                {print('cannot load anymore data');
-                }
               print('pressed button');
             },
           ),
         ],
       ),
-
       body: ListView.builder(
         itemCount: _listViewData.length,
         itemBuilder: (context, index) {
@@ -93,28 +96,28 @@ class _ListViewClickListenerState extends State<fav_tab> {
 
           return GestureDetector(
               child: ListTile(title: Text('$item')),
-              onTap: () {
-              },
+              onTap: () {},
               onTapUp: (_) {
                 Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => new form(Colors.white, jarNumber: new JarNumber(index)))
-                );
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => new form(Colors.white,
+                            jarNumber: new JarNumber(index))));
               },
-              onLongPress:(){
+              onLongPress: () {
                 print('longpress');
                 showDialog(
                     context: context,
                     builder: (BuildContext context) {
                       return AlertDialog(
                         title: Text('delete?'),
-                        content: const Text(
-                            'This will delete your jar'),
+                        content: const Text('This will delete your jar'),
                         actions: <Widget>[
                           FlatButton(
                             child: const Text('CANCEL'),
                             onPressed: () {
-                              Navigator.of(context, rootNavigator: true).pop('dialog');
+                              Navigator.of(context, rootNavigator: true)
+                                  .pop('dialog');
                             },
                           ),
                           RaisedButton(
@@ -123,24 +126,17 @@ class _ListViewClickListenerState extends State<fav_tab> {
                               setState(() {
                                 _listViewData.removeAt(index);
                               });
-                              Navigator.of(context).pop(_listViewData.indexOf(item));
+                              Navigator.of(context)
+                                  .pop(_listViewData.indexOf(item));
                               return (context as Element).reassemble();
                             },
-
                           )
                         ],
                       );
                     });
-
-
-
-
-              }
-
-          );
+              });
         },
       ),
-
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showDialog(
@@ -155,7 +151,7 @@ class _ListViewClickListenerState extends State<fav_tab> {
                           padding: EdgeInsets.all(8.0),
                           child: TextFormField(
                             decoration:
-                            new InputDecoration(labelText: "title of jar"),
+                                new InputDecoration(labelText: "title of jar"),
                             controller: jartitle,
                           ),
                         ),
@@ -167,19 +163,16 @@ class _ListViewClickListenerState extends State<fav_tab> {
                           padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
                           splashColor: Colors.grey,
                         ),
-
                       ],
                     ),
                   ),
                 );
               });
         },
-        child: Icon(Icons.add),tooltip: 'Add a Jar!',
+        child: Icon(Icons.add),
+        tooltip: 'Add a Jar!',
         backgroundColor: Colors.pinkAccent,
-
       ),
-
     );
-
   }
 }
