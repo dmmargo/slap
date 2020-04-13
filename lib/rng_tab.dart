@@ -33,7 +33,11 @@ class rng_tab extends StatelessWidget {
               'please enter a max number:',
               textAlign: TextAlign.center,
               overflow: TextOverflow.ellipsis,
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+              ),
             ),
             SizedBox(height: 50),
             TextFormField(
@@ -57,7 +61,11 @@ class rng_tab extends StatelessWidget {
             ),
             SizedBox(height: 40),
             RaisedButton(
-              child: Text("Get Results"),
+              child: Text("Get Results", style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+              ),),
               onPressed: () {
                 main();
                 return showDialog(

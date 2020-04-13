@@ -61,6 +61,7 @@ class _ListViewClickListenerState extends State<fav_tab> {
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
+        backgroundColor: Colors.yellow,
         title: Text('Pick your poison',
             style: TextStyle(
               fontWeight: FontWeight.w200,

@@ -58,7 +58,7 @@ class home_tab extends StatelessWidget {
               padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
               splashColor: Colors.grey,
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 30),
             RaisedButton(
               child: Text("Roll a Dice",
                   style: TextStyle(
@@ -72,7 +72,7 @@ class home_tab extends StatelessWidget {
               padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
               splashColor: Colors.grey,
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 30),
             RaisedButton(
               child: Text("Magic 8 Ball",
                   style: TextStyle(
