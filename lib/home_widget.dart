@@ -5,7 +5,6 @@ import 'package:slap/form.dart';
 import 'package:slap/home_tab.dart';
 import 'package:slap/rng_tab.dart';
 
-
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
 
@@ -15,8 +14,7 @@ class HomePage extends StatefulWidget {
 
 class HomePageState extends State<HomePage> {
   @override
-  HomePageState createState() =>
-      HomePageState();
+  HomePageState createState() => HomePageState();
   int selectedIndex = 0;
   //List<Widget> widgetOptions = <Widget>[
   final widgetOptions = [
@@ -29,12 +27,13 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('SLAP: Sounds like a Plan', style: TextStyle(
-            color: Colors.grey,
-            fontWeight: FontWeight.bold,
-            fontSize: 30)),
+        title: Text('SLAP: Sounds like a Plan',
+            style: TextStyle(
+              color: Colors.grey,
+              fontWeight: FontWeight.bold,
+              fontSize: 30,
+            )),
         backgroundColor: Colors.black87,
-
       ),
       body: Center(
         child: widgetOptions.elementAt(selectedIndex),
@@ -62,5 +61,4 @@ class HomePageState extends State<HomePage> {
       selectedIndex = index;
     });
   }
-
 }

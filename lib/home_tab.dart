@@ -11,20 +11,30 @@ class home_tab extends StatelessWidget {
 
   var flip = ["heads", "tails"];
   var roll = ['1', '2', '3', '4', '5', '6'];
-  var shake = ['yes', 'no', 'maybe', 'not in your wildest dreams', 'of course', 'oh gosh', 'oh no', 'oh me oh my'];
-
+  var shake = [
+    'yes',
+    'no',
+    'maybe',
+    'not in your wildest dreams',
+    'of course',
+    'oh gosh',
+    'oh no',
+    'oh me oh my'
+  ];
 
   void flipcoin() {
     element = (flip..shuffle()).first;
     return print(element); // e.g. 'head'
   }
+
   void rolldice() {
     element = roll[rnd.nextInt(roll.length)];
     return print(element); // e.g. '2'
   }
+
   void shakeball() {
     element = shake[rnd.nextInt(shake.length)];
-    return print(element);// e.g. 'yes'
+    return print(element); // e.g. 'yes'
   }
 
   @override
@@ -69,10 +79,12 @@ class home_tab extends StatelessWidget {
                   context: context,
                   builder: (context) {
                     return AlertDialog(
-                      // Retrieve the text the that user has entered by using the
-                      // TextEditingController.
-                        content: Text(element, style: TextStyle(fontWeight: FontWeight.bold),
-                        ));
+                        // Retrieve the text the that user has entered by using the
+                        // TextEditingController.
+                        content: Text(
+                      element,
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ));
                   },
                 );
               },
@@ -87,6 +99,5 @@ class home_tab extends StatelessWidget {
 
   String randomListItem(List<String> lst) {
     randomListItem(List lst) => lst[rnd.nextInt(lst.length)];
-
   }
 }
