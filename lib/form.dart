@@ -40,7 +40,7 @@ class _ListViewClickListenerState extends State<form> {
       print(jsonResponse[0]['options'][num]['paper'][i]);
       _listViewData.add(jsonResponse[0]['options'][num]['paper'][i]);
     }
-    print('printing from json file');
+    //print('printing from json file');
     //refresh the page
     return (context as Element).reassemble();
   }
