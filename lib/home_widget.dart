@@ -18,8 +18,8 @@ class HomePageState extends State<HomePage> {
   int selectedIndex = 0;
   //List<Widget> widgetOptions = <Widget>[
   final widgetOptions = [
-    new home_tab(Colors.white),
-    new rng_tab(Colors.white),
+    new home_tab(Colors.black),
+    new rng_tab(Colors.black),
     new fav_tab(Colors.white),
   ];
 
@@ -34,7 +34,7 @@ class HomePageState extends State<HomePage> {
               foreground: Paint()
                 ..style = PaintingStyle.stroke
                 ..strokeWidth = 2
-                ..color = Colors.yellow[700],
+                ..color = Colors.yellow,
             )),
         backgroundColor: Colors.black87,
       ),
@@ -45,7 +45,7 @@ class HomePageState extends State<HomePage> {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('Home')),
           BottomNavigationBarItem(
-              icon: Icon(Icons.play_arrow), title: Text('RNG')),
+              icon: Icon(Icons.videogame_asset), title: Text('RNG')),
           BottomNavigationBarItem(
               icon: Icon(Icons.favorite), title: Text('Favorites')),
         ],

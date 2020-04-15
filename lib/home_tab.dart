@@ -46,6 +46,10 @@ class home_tab extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             RaisedButton(
+              shape: RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(18.0),
+                  side: BorderSide(color: Colors.yellow)
+              ),
               child: Text("Flip a coin",
                   style: TextStyle(
                     color: Colors.yellow,
@@ -82,6 +86,10 @@ class home_tab extends StatelessWidget {
             ),
             SizedBox(height: 30),
             RaisedButton(
+              shape: RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(18.0),
+                  side: BorderSide(color: Colors.yellow)
+              ),
               child: Text("Roll a Dice",
                   style: TextStyle(
                     color: Colors.yellow,
@@ -118,6 +126,10 @@ class home_tab extends StatelessWidget {
             ),
             SizedBox(height: 30),
             RaisedButton(
+              shape: RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(18.0),
+                  side: BorderSide(color: Colors.yellow)
+              ),
               child: Text("Magic 8 Ball",
                   style: TextStyle(
                     color: Colors.yellow,

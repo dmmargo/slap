@@ -34,13 +34,16 @@ class rng_tab extends StatelessWidget {
               textAlign: TextAlign.center,
               overflow: TextOverflow.ellipsis,
               style: TextStyle(
-                color: Colors.black,
+                color: Colors.yellow,
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
               ),
             ),
             SizedBox(height: 50),
             TextFormField(
+              style: TextStyle(
+                color: Colors.yellow,
+              ),
               autofocus: true,
               controller: numberController,
               keyboardType: TextInputType.number,
@@ -49,18 +52,23 @@ class rng_tab extends StatelessWidget {
               ],
               decoration: new InputDecoration(
                 labelText: "Enter your number",
-                hoverColor: Colors.blueGrey,
+                hoverColor: Colors.yellow,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.all(
                     Radius.circular(4.0),
+
                   ),
                 ),
               ),
-              cursorColor: Colors.blue,
+              cursorColor: Colors.yellow,
               obscureText: false,
             ),
             SizedBox(height: 40),
             RaisedButton(
+              shape: RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(18.0),
+                  side: BorderSide(color: Colors.yellow)
+              ),
               child: Text("Get Your Random Number", style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
@@ -81,10 +89,9 @@ class rng_tab extends StatelessWidget {
                   },
                 );
               },
-              color: Colors.pinkAccent,
-              textColor: Colors.black,
+              color: Colors.pink[200],
               padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-              splashColor: Colors.grey,
+              splashColor: Colors.yellow,
             ),
           ],
         )));
