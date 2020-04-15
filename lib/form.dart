@@ -165,7 +165,7 @@ class _ListViewClickListenerState extends State<form> {
                 );
               });
         },
-        child: Icon(Icons.add),tooltip: 'Add a Jar!',
+        child: Icon(Icons.add),tooltip: 'Add to Jar!',
         backgroundColor: Colors.pinkAccent,
 
       ),

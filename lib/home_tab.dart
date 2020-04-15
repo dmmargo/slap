@@ -15,9 +15,9 @@ class home_tab extends StatelessWidget {
     'yes',
     'no',
     'maybe',
-    'not in your wildest dreams',
-    'of course',
-    'oh gosh',
+    'oh yis',
+    'sure, why not',
+    'oh gosh, idk, try again',
     'oh no',
     'oh me oh my'
   ];
