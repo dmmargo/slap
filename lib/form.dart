@@ -74,7 +74,7 @@ class _ListViewClickListenerState extends State<form> {
             tooltip: 'reroll',
             onPressed: () {
               pickingpoison();
-              print('pressed asset button');
+              //print('pressed asset button');
                   return showDialog(
                     context: context,
                     builder: (context) {
@@ -94,7 +94,7 @@ class _ListViewClickListenerState extends State<form> {
             tooltip: 'load data',
             onPressed: () {
               loadData();
-              print('pressed asset button');
+              //print('pressed asset button');
             },
           ),
         ],
@@ -166,7 +166,7 @@ class _ListViewClickListenerState extends State<form> {
               });
         },
         child: Icon(Icons.add),tooltip: 'Add to Jar!',
-        backgroundColor: Colors.pinkAccent,
+        backgroundColor: Colors.pink[200],
 
       ),
 

@@ -19,25 +19,22 @@
       {
         "name": "Fast Food",
         "paper": [
-          "McDonald",
-          "Panda Express",
-          "In and Out",
-          "Chick Fil A",
-          "Taco Bell",
-          "Carls Jr",
-          "Jumba Juice",
-          "Qdoba",
-          "Subways"
+          "McDonald", "Panda Express", "In and Out", "Chick Fil A", "Taco Bell", "Carls Jr", "Jumba Juice",
+          "Qdoba", "Subways", "The Den", "Poly Trolley"
         ]
       },
       {
-        "name": "Classes",
+        "name": "Home Foods",
         "paper": [
-          "cs499",
-          "cs408",
-          "cs408",
-          "cs140",
-          "cs375"
+          "sandwich", "ramen", "rice and egg", "spaghetti", "mac and cheese"
+        ]
+      },
+      {
+        "name": "Games",
+        "paper": [
+          "League of Legends", "Overwatch",
+          "R6", "CSGO", "OSU", "Portal 2",
+          "Adventure Capitalism","Left 4 Dead 2"
         ]
       }
     ]

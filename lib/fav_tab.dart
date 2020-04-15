@@ -172,7 +172,7 @@ class _ListViewClickListenerState extends State<fav_tab> {
         },
         child: Icon(Icons.add),
         tooltip: 'Add a Jar!',
-        backgroundColor: Colors.pinkAccent,
+        backgroundColor: Colors.pink[200],
       ),
     );
   }
