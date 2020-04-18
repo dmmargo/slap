@@ -4,6 +4,10 @@ import 'dart:async' show Future;
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:convert';
 import 'package:slap/jar_json.dart';
+import 'package:http/http.dart' as http;
+
+
+
 
 Future<String> _loadAStudentAsset() async {
   return await rootBundle.loadString('assets/jar.json');
@@ -16,6 +20,7 @@ class fav_tab extends StatefulWidget {
 
   const fav_tab(Color white, {Key key, this.color}) : super(key: key);
   _ListViewClickListenerState createState() => _ListViewClickListenerState();
+
 }
 
 class JarNumber {
@@ -23,7 +28,24 @@ class JarNumber {
   JarNumber(this.index);
 }
 
+
+
 class _ListViewClickListenerState extends State<fav_tab> {
+  var papers = const [];
+  /**Future<String> _loadAStudentAsset() async {
+    http.Response response = await http.get('http://www.mocky.io/v2/5e9a9791330000fcc87b3033');
+    String content = response.body;
+    //String content = await rootBundle.loadString('assets/jar.json');
+    List name = json.decode(content);
+    List <jar_json> _papers = name.map((json) => jar_json.fromJson(json)).toList();
+
+    /**
+        setState(() {
+        papers = _papers;
+        });*/
+    //return await rootBundle.loadString('assets/jar.json');
+  }*/
+
   GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   final List<String> _listViewData = [];
 
@@ -133,8 +155,11 @@ class _ListViewClickListenerState extends State<fav_tab> {
                               //remove from list
                               setState(() {
                                 _listViewData.removeAt(index);
-                                String whatisleft = jsonEncode(_listViewData); // say it again
 
+                                //print ('hi');
+                                //String whatisleft = jsonEncode(_listViewData); // say it again
+                                //String itemsss = jsonDecode(_listViewData.removeAt(index));
+                                //print(itemsss);
                               });
                               Navigator.of(context)
                                   .pop(_listViewData.indexOf(item));
