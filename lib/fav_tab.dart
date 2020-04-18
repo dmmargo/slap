@@ -6,12 +6,10 @@ import 'dart:convert';
 import 'package:slap/jar_json.dart';
 import 'package:http/http.dart' as http;
 
-
-
-
+/**
 Future<String> _loadAStudentAsset() async {
   return await rootBundle.loadString('assets/jar.json');
-}
+}*/
 
 TextEditingController jartitle = new TextEditingController();
 
@@ -31,20 +29,18 @@ class JarNumber {
 
 
 class _ListViewClickListenerState extends State<fav_tab> {
-  var papers = const [];
-  /**Future<String> _loadAStudentAsset() async {
+  var names = const [];
+  Future<String> _loadAStudentAsset() async {
     http.Response response = await http.get('http://www.mocky.io/v2/5e9a9791330000fcc87b3033');
     String content = response.body;
     //String content = await rootBundle.loadString('assets/jar.json');
-    List name = json.decode(content);
-    List <jar_json> _papers = name.map((json) => jar_json.fromJson(json)).toList();
-
-    /**
-        setState(() {
-        papers = _papers;
-        });*/
+    List collection = json.decode(content);
+    List <jar_json> _names = collection.map((json) => jar_json.fromJson(json)).toList();
+    setState(() {
+        names = _names;
+    });
     //return await rootBundle.loadString('assets/jar.json');
-  }*/
+  }
 
   GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   final List<String> _listViewData = [];
