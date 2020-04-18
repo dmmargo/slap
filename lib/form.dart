@@ -30,6 +30,13 @@ class _ListViewClickListenerState extends State<form> {
 
   final List<String> _listViewData = [];
 
+  @override
+  void initState() {
+    super.initState();
+
+    // use this
+    loadData();
+  }
 
   loadData()async{
     int num = widget.jarNumber.index;
@@ -89,14 +96,14 @@ class _ListViewClickListenerState extends State<form> {
                   );
             },
           ),
-          IconButton(
+          /**IconButton(
             icon: const Icon(Icons.file_upload),
             tooltip: 'load data',
             onPressed: () {
               loadData();
               //print('pressed asset button');
             },
-          ),
+          ),*/
         ],
 
       ),

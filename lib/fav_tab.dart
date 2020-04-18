@@ -52,6 +52,13 @@ class _ListViewClickListenerState extends State<fav_tab> {
     } else
       return print("component was empty");
   }
+  @override
+  void initState() {
+    super.initState();
+
+    // use this
+    loadData();
+  }
 
   bool pressing = true;
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
@@ -72,7 +79,7 @@ class _ListViewClickListenerState extends State<fav_tab> {
                 ..color = Colors.black,
             )),
         actions: <Widget>[
-          IconButton(
+          /**IconButton(
             icon: const Icon(Icons.file_upload),
             tooltip: 'use existing JSON files',
             onPressed: () {
@@ -87,14 +94,13 @@ class _ListViewClickListenerState extends State<fav_tab> {
               }
               print('pressed button');
             },
-          ),
+          ),*/
         ],
       ),
       body: ListView.builder(
         itemCount: _listViewData.length,
         itemBuilder: (context, index) {
           final item = _listViewData[index];
-
           return GestureDetector(
               child: ListTile(title: Text('$item')),
               onTap: () {},
@@ -124,8 +130,11 @@ class _ListViewClickListenerState extends State<fav_tab> {
                           RaisedButton(
                             child: const Text('ACCEPT'),
                             onPressed: () {
+                              //remove from list
                               setState(() {
                                 _listViewData.removeAt(index);
+                                String whatisleft = jsonEncode(_listViewData); // say it again
+
                               });
                               Navigator.of(context)
                                   .pop(_listViewData.indexOf(item));
@@ -172,7 +181,9 @@ class _ListViewClickListenerState extends State<fav_tab> {
         },
         child: Icon(Icons.add),
         tooltip: 'Add a Jar!',
-        backgroundColor: Colors.pink[200],
+        backgroundColor: Colors.pink[200]
+
+
       ),
     );
   }
