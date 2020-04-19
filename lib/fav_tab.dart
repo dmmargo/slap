@@ -6,10 +6,10 @@ import 'dart:convert';
 import 'package:slap/jar_json.dart';
 import 'package:http/http.dart' as http;
 
-/**
+
 Future<String> _loadAStudentAsset() async {
   return await rootBundle.loadString('assets/jar.json');
-}*/
+}
 
 TextEditingController jartitle = new TextEditingController();
 
@@ -29,26 +29,27 @@ class JarNumber {
 
 
 class _ListViewClickListenerState extends State<fav_tab> {
-  var names = const [];
-  Future<String> _loadAStudentAsset() async {
-    http.Response response = await http.get('http://www.mocky.io/v2/5e9a9791330000fcc87b3033');
-    String content = response.body;
-    //String content = await rootBundle.loadString('assets/jar.json');
-    List collection = json.decode(content);
-    List <jar_json> _names = collection.map((json) => jar_json.fromJson(json)).toList();
+  //var names = const [];
+  /**
+  List <jar_json> name = [];
+
+  Future _loadAStudentAsset() async {
+    List<jar_json> _names = await jar_json.browse();
     setState(() {
-        names = _names;
+        name = _names;
+
     });
     //return await rootBundle.loadString('assets/jar.json');
   }
-
+      */
   GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   final List<String> _listViewData = [];
 
   loadData() async {
     String jsonString = await _loadAStudentAsset();
     final jsonResponse = json.decode(jsonString);
-    print(jsonResponse[0]['options'].length);
+    //print(jsonResponse[0]['options'].length);
+
     for (int i = 0; i < jsonResponse[0]['options'].length; i++) {
       _listViewData.add(jsonResponse[0]['options'][i]['name']);
     }
@@ -96,6 +97,7 @@ class _ListViewClickListenerState extends State<fav_tab> {
                 ..strokeWidth = 2
                 ..color = Colors.black,
             )),
+
         actions: <Widget>[
           /**IconButton(
             icon: const Icon(Icons.file_upload),
@@ -115,6 +117,7 @@ class _ListViewClickListenerState extends State<fav_tab> {
           ),*/
         ],
       ),
+
       body: ListView.builder(
         itemCount: _listViewData.length,
         itemBuilder: (context, index) {
