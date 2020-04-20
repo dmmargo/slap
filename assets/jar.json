@@ -40,6 +40,13 @@
           "R6", "Garry's Mod", "Stardew Valley", "Portal 2", "Terraria", "Left 4 Dead 2", "Unturned", "Payday 2", "Borderlands 2",
           "Dark Souls", "Tabletop Simulator", "Don't Starve Together", "PUBG"
         ]
+      },
+      {
+        "name": "Hang Out",
+        "paper": [
+          "Hiking", "Mall", "Eating", "Netflix", "Theater", "Out of Town", "Park", "Games", "Boardgames","Try something new", "Groccery shopping","Do nothing",
+          "Cook something", "Start on a project together"
+        ]
       }
     ]
   }
