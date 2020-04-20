@@ -2,6 +2,24 @@
   {
     "options": [
       {
+        "name": "Games",
+        "paper": [
+          "League of Legends", "Overwatch", "Starcraft", "Heartstone", "Dota 2", "Team Fortress 2", "Warframe", "Destiny 2",
+          "R6", "Garry's Mod", "Stardew Valley", "Portal 2", "Terraria", "Left 4 Dead 2", "Unturned", "Payday 2", "Borderlands 2",
+          "Dark Souls", "Tabletop Simulator", "Don't Starve Together", "PUBG"
+        ]
+      },
+      {
+        "name": "Fast Food",
+        "paper": [
+          "McDonald", "Starbucks", "Subway", "Burger King", "Wendy's", "Taco Bell", "Dunkin' Donuts", "Chick-Fil-A", "Pizza Hut", "Domino's",
+          "Panera Bread", "Sonic", "KFC", "Chipotle", "Carl's Jr/Hardee's", "Dairy Queen", "Arby's", "Little Cesars", "Jack in the Box",
+          "Popeyes Louisiana Kitchen", "Papa John's", "Panda Express", "Jimmy John's", "Zaxby's", "Five Guys", "Culver's", "Steak n Shake",
+          "Wingstop", "Jersy Mike's Subs", "Qdoba", "Church's Chicken", "El Pollo Loco", "Del Taco", "Firehouse Subs", "Auntie Anne's",
+          "Long John Silver's", "Jamba Juice"
+        ]
+      },
+      {
         "name": "League Champs",
         "paper": [
           "Aatrox", "Ahri", "Akali", "Alistar", "Amumu", "Anivia", "Annie", "Aphelios", "Ashe",
@@ -17,28 +35,10 @@
         ]
       },
       {
-        "name": "Fast Food",
-        "paper": [
-          "McDonald", "Starbucks", "Subway", "Burger King", "Wendy's", "Taco Bell", "Dunkin' Donuts", "Chick-Fil-A", "Pizza Hut", "Domino's",
-          "Panera Bread", "Sonic", "KFC", "Chipotle", "Carl's Jr/Hardee's", "Dairy Queen", "Arby's", "Little Cesars", "Jack in the Box",
-          "Popeyes Louisiana Kitchen", "Papa John's", "Panda Express", "Jimmy John's", "Zaxby's", "Five Guys", "Culver's", "Steak n Shake",
-          "Wingstop", "Jersy Mike's Subs", "Qdoba", "Church's Chicken", "El Pollo Loco", "Del Taco", "Firehouse Subs", "Auntie Anne's",
-          "Long John Silver's", "Jamba Juice"
-        ]
-      },
-      {
         "name": "Simple At-Home Foods",
         "paper": [
           "Instant Ramen", "Sandwich", "Mac and Cheese", "Pizza", "Spaghetti", "Burger", "Hotdog", "Quadillas", "Rice and Something",
           "Omelete", "Oatmeal", "Cereal", "Granola"
-        ]
-      },
-      {
-        "name": "Games",
-        "paper": [
-          "League of Legends", "Overwatch", "Starcraft", "Heartstone", "Dota 2", "Team Fortress 2", "Warframe", "Destiny 2",
-          "R6", "Garry's Mod", "Stardew Valley", "Portal 2", "Terraria", "Left 4 Dead 2", "Unturned", "Payday 2", "Borderlands 2",
-          "Dark Souls", "Tabletop Simulator", "Don't Starve Together", "PUBG"
         ]
       },
       {
